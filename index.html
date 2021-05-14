@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="indexstyle.css">
+    <title>JIRA ticket mananger</title>
+</head>
+
+<body>
+    <div class="toolbar">
+        <div class="filter-container">
+            <div class="filter-colors_container">
+                <div class="filter-colors lightpink"></div>
+            </div>
+
+            <div class="filter-colors_container">
+                <div class="filter-colors lightskyblue"></div>
+            </div>
+
+            <div class="filter-colors_container">
+                <div class="filter-colors lightgreen"></div>
+            </div>
+
+            <div class="filter-colors_container">
+                <div class="filter-colors black"></div>
+            </div>
+        </div>
+        <div class="action-container">
+            <div class="add action-container_icons">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="remove action-container_icons" >
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <i class="fa fa-lock lock" aria-hidden="true"></i>
+    </div>
+    <div class="main-container">
+        <div class="modal_container">
+            <div class="modal_task_container">
+                <textarea class="desc_box" name="" id="" rows="10" cols="30" placeholder="Enter your task here"></textarea>
+            </div>
+            <div class="modal_filter_container">
+                <div class="modal_filter lightpink"></div>
+                <div class="modal_filter lightskyblue"></div>
+                <div class="modal_filter lightgreen"></div>
+                <div class="modal_filter black border"></div>
+            </div>
+        </div>
+        <!-- <div class="ticket-container">
+            <div class="ticket-color"></div>
+            <div class="ticket-id-container">
+                <h3 class="ticket-id">#sampleId</h3>
+                <p class="ticket">Loremipsumdolorsiametconsecteturadipisicingelit. Quasi quisquam aut voluptatem! Accusantium totam provident quos, repellat cum cupiditate sequi ullam modi harum maiores nesciunt repellendus reprehenderit corporis doloribus ducimus.</p>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+
+    <!-- Usage -->
+    <script>
+    // Instantiate
+        var uid = new ShortUniqueId();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="filter.js"></script>
+    <script src="edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* Basic */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+/* Generic Style */
+.lightpink{
+    background-color: pink;
+}
+.lightskyblue{
+    background-color: skyblue;
+}
+.lightgreen{
+    background-color: green;
+}
+.black{
+    background-color: black;
+}
+
+/* Styling toolbar */
+.toolbar{
+    /* 1. Toolbar height  */
+    height: 12vh;
+    background-color: #444;
+
+    /* 1.3 */
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}  
+
+.toolbar>*{
+    border-radius: 0.5rem;
+}
+/* ****************** Filter container ******************* */
+.filter-container{
+    /* 1.1 */
+    width: 20%;
+    height: 70%;
+    background-color: rgb(85, 82, 82);
+    margin-left: 6rem;
+    /* 2.1  */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filter-colors_container{
+    /* 2 */
+    height: 100%;
+    width: 25%;
+    /* 3.1 */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.filter-colors{
+    /* 3 Center elements in filterContainer*/
+    height: 40%;
+    width: 50%;
+    border-radius: 0.25rem;
+}
+/* ****************** Action container *******************  */
+.action-container{
+    /* 1.2 */
+    width: 10%;
+    height: 70%;
+    background-color: rgb(146, 102, 35);
+    margin-left: 2rem;
+    display: flex;
+    color: seashell;
+}
+.action-container_icons{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fas{
+    font-size: x-large;
+}
+.fa{
+    font-size: xx-large;
+}
+.action-container_icons:hover{
+    background-color: rgb(104, 82, 49);
+}
+/* Main Container */
+.main-container{
+    min-height: 88vh;
+    border: 5px solid green;
+    background-color:  rgb(240, 239, 239);
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: stretch; */
+    justify-content: space-around;
+    gap: 2vw;
+    /* To avoid absolute errors we use left and top to fit content at center instead of display flex */
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+
+
+.modal_container{
+    position: absolute;
+    height: 18rem;
+    width: 33rem;
+    /* To avoid absolute errors we use left and top to fit content at center. */
+    top: 30vh;
+    left: calc((100vw - 33rem)/2);
+    background-color: rgb(175, 108, 108);
+    display: none;
+}
+.modal_task_container{
+    width: 70%;
+    background-color: black;
+}
+.desc_box{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    line-height: 125%;
+    color: lightslategray;
+}
+.modal_filter_container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #444;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.modal_filter{
+    height: 20%;
+    width: 60%;
+}
+.border{
+    border: 2px solid ghostwhite;
+}
+/* Ticket-container */
+
+.ticket-container{
+    width: 20rem;
+    background-color: white;
+    height: 10rem;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+.ticket-color{
+    height: 8%;
+    /* background-color: black;  */
+}
+.ticket-id-container{
+    /* margin-top: 10rem; */
+    padding-left: 1rem;
+}
+.ticket-id{
+    color: lightslategrey;
+}  
+
+.ticket{
+    height: 70%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+/* Media Query */
+@media only screen and (max-width: 500px){
+    .toolbar{
+        gap: 3rem;
+    }
+    .filter-container {
+        height: 70%;
+        width: 42%;
+    }
+    .action-container {
+        height: 70%;
+        width: 20%;}
+
+    .modal_container{
+        top: 25vh;
+        height: 15rem;
+        width: 20rem;
+        left: calc((100vw - 20rem)/2);
+    }
+}
